@@ -10,7 +10,7 @@ Before running the program, make sure you have Node.js and MongoDB installed on 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/shivaga/audioform.git
    ```
 
 2. Install dependencies:
