@@ -15,7 +15,7 @@ Before running the program, make sure you have Node.js and MongoDB installed on 
 
 2. Install dependencies:
    ```
-   cd your-repository
+   cd audioform
    npm install
    ```
 
