@@ -26,7 +26,7 @@ app.get('/',(req,res)=>{
 app.post('/upload', (req, res) => {
   //Checking if there is a file or not 
   console.log("Hi");
-  if (!req.files || Object.keys(req.files).length === 0) {
+  if (!req.files || Object.keys(req.files).length === 0 ) {
     return res.status(400).send('No files were uploaded.');
   }
 

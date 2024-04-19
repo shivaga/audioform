@@ -12,6 +12,10 @@ const Form = () => {
     setFile(e.target.files[0]);
   };
   const handleSubmit = async () => {
+    if (!doctorName || !patientName || !patientAge || !recordingDate || !file) {
+        alert("Please fill all the fields");
+        return 
+    }
     const formData = new FormData();
     formData.append('file', file);
     formData.append('doctorname', doctorName);
