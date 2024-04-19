@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Audio File Upload Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application that allows users to upload audio files along with form data. The client-side is built with React.js and runs on port 3000, while the server-side is built with Node.js and Express and runs on port 8000. Audio files are stored on the server, and form data is saved to MongoDB. When retrieving data, form data is fetched from MongoDB, and audio files are served from the server.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before running the program, make sure you have Node.js and MongoDB installed on your machine.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/your-repository.git
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+   ```
+   cd your-repository
+   npm install
+   ```
 
-### `npm test`
+## Running the Server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Server-side
 
-### `npm run build`
+To run the server-side, navigate to the server directory and use the following command:
+```
+node app.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The server will start running on port 8000 by default.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Client-side
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the client-side, use the following command:
+```
+npm start
+```
 
-### `npm run eject`
+The client-side application will start running on port 3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Open your web browser and navigate to http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Fill in the form with the required data:
+   - Doctor Name
+   - Patient Name
+   - Patient Age
+   - Recording Date
+   - Audio File (Choose a file to upload)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Submit the form.
 
-## Learn More
+4. The server will store the audio file on the server and save the form data to MongoDB.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. When retrieving data, the server will fetch form data from MongoDB, and audio files will be served from the server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Notes
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- All audio files are stored on the server in a designated directory (e.g., uploads/).
+- Form data is saved to MongoDB using a MongoDB database.
+- Make sure to configure MongoDB connection settings in your server-side code.
